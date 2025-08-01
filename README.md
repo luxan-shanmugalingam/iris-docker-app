@@ -31,22 +31,22 @@ This project is a simple web application that predicts the species of an Iris fl
 
 1. **Clone the repository (if you haven't already):**
 
-   ```bash
+  ```bash
    git clone https://github.com/luxan-shanmugalingam/iris-docker-app.git
    cd iris-docker-app
   ````
 
 2. **Build the Docker image:**
 
-   ```bash
+  ```bash
    docker build -t iris_app .
-   ```
+  ```
 
 3. **Run the Docker container:**
 
-   ```bash
+  ```bash
    docker run -p 5000:5000 iris_app
-   ```
+  ```
 
 4. **Access the app:**
 
