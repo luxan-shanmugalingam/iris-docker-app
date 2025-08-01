@@ -105,14 +105,9 @@ Then, open your browser at: `http://localhost:5000`
 
 - **S. Luxan** – Developer and Author
 
----
-
-## 📃 License
-
-This project is released under the MIT License.
 
 ---
 
 ## 📬 Contact
 
-For questions or collaborations, please contact: `luxanscience@gmail.com`
+For questions or collaborations, please contact: `luxan.shanmugalingam@gmail.com`
