@@ -1,113 +1,66 @@
-# 🌺 Iris Flower Classification – Project Documentation
+# 🌺 Iris Classifier Web App with Docker
 
-## 📌 Project Title
-**Iris Flower Species Prediction Using Random Forest and Flask API**
-
----
-
-## 🧠 Project Overview
-
-This project demonstrates a simple machine learning application that predicts the species of an Iris flower based on its physical attributes. The web API is developed using Flask, and the trained model is deployed using Docker.
-
-It is designed for educational purposes and is easy to test and reproduce.
+## 📌 Project Overview
+This project is a simple web application that predicts the species of an Iris flower based on its physical attributes using a trained Random Forest model. The app is built with Python and Flask, and containerized with Docker for easy deployment.
 
 ---
 
 ## 🎯 Objective
-
-- Train a classification model using the classic Iris dataset.
-- Build a Flask API to serve predictions.
-- Provide Swagger documentation for easy API testing.
-- Package the entire project in a Docker container for seamless deployment.
+- Predict Iris flower species (Setosa, Versicolor, Virginica) from user input features.
+- Provide a web API endpoint to make predictions.
+- Package the application in a Docker container for easy setup and running.
 
 ---
 
-## 📂 Folder Structure
-
-```
-iris_app/
-├── app.py         # Flask application with prediction API
-├── rf.pkl         # Trained Random Forest model
-├── Dockerfile     # Docker instructions for containerization
-└── README.md      # Usage guide
-```
+## 📂 Repository Contents
+- `docker_app.py` — Flask application serving the prediction API.
+- `rf.pkl` — Pre-trained Random Forest model.
+- `Dockerfile` — Instructions to build the Docker image.
+- `requirements.txt` — Python dependencies.
+- `README.md` — This file.
 
 ---
 
-## 🔧 Technologies Used
+## 🐳 How to Run the Docker Image
 
-- Python (v3.8+)
-- Flask
-- Scikit-learn
-- Docker
-- Swagger (Flasgger)
+### Prerequisites:
+- Docker installed on your machine.  
+  You can download and install Docker from: https://www.docker.com/get-started
 
----
+### Steps to build and run:
 
-## 🧪 Dataset
+1. **Clone the repository (if you haven't already):**
 
-- **Name**: Iris Flower Dataset
-- **Source**: UCI Machine Learning Repository
-- **Features**:
-  - Sepal length (cm)
-  - Sepal width (cm)
-  - Petal length (cm)
-  - Petal width (cm)
-- **Target**: Species (Setosa, Versicolor, Virginica)
+   ```bash
+   git clone https://github.com/luxan-shanmugalingam/iris-docker-app.git
+   cd iris-docker-app
+````
 
----
+2. **Build the Docker image:**
 
-## 🧠 Model
+   ```bash
+   docker build -t iris_app .
+   ```
 
-- Algorithm: Random Forest Classifier
-- Accuracy: ~97% (cross-validation on training data)
-- Saved as: `rf.pkl` using joblib
+3. **Run the Docker container:**
 
----
+   ```bash
+   docker run -p 5000:5000 iris_app
+   ```
 
-## 🌐 API Documentation
+4. **Access the app:**
 
-### Endpoint: `/predict`
+   Open a browser and go to:
+   `http://localhost:5000`
 
-**Method**: `GET`
+5. **Use the API:**
 
-**Parameters**:
-- `Sepal length`: float
-- `Sepal width`: float
-- `Petal length`: float
-- `Petal width`: float
-
-**Response**:
-```json
-{
-  "prediction": "versicolor"
-}
-```
-
-**Swagger UI**: Accessible at `http://localhost:5000/apidocs`
-
----
-
-## 🐳 Docker Deployment
-
-To run the app using Docker:
-
-```bash
-docker build -t iris_app .
-docker run -p 5000:5000 iris_app
-```
-
-Then, open your browser at: `http://localhost:5000`
-
----
-
-## 📢 Contributors
-
-- **S. Luxan** – Developer and Author
-
+   You can send requests to the `/predict` endpoint. For example, access Swagger UI at:
+   `http://localhost:5000/apidocs`
 
 ---
 
 ## 📬 Contact
 
-For questions or collaborations, please contact: `luxan.shanmugalingam@gmail.com`
+For any questions or issues, please contact:
+**S. Luxan** — `luxan.shanmugalingam@gmail.com`
