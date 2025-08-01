@@ -34,7 +34,7 @@ This project is a simple web application that predicts the species of an Iris fl
    ```bash
    git clone https://github.com/luxan-shanmugalingam/iris-docker-app.git
    cd iris-docker-app
-````
+  ````
 
 2. **Build the Docker image:**
 
